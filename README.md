@@ -14,3 +14,4 @@ If every page returns 500 with "compiled against a different Node.js version", t
 ```
 cd node_modules/better-sqlite3 && rm -rf build && npx prebuild-install -r node -t "$(node -p process.versions.node)"
 ```
+This was an experiment to see how claude code works.
