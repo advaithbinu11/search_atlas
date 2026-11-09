@@ -1,0 +1,82 @@
+:root {
+  color-scheme: dark;
+
+  --color-bg: #09090b;
+  --color-surface: #18181b;
+  --color-surface-raised: #27272a;
+  --color-border: #3f3f46;
+  --color-border-input: #71717a;
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+  --color-accent: #c084fc;
+  --color-on-accent: #09090b;
+  --color-series-a: #c084fc;
+  --color-series-b: #fcb04f;
+  --color-danger: #f87171;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-ramp-1: #8052bc;
+  --color-ramp-2: #9a64d2;
+  --color-ramp-3: #b07ae0;
+  --color-ramp-4: #caa0f0;
+  --color-ramp-5: #e9d5ff;
+
+  --gradient-accent-border: linear-gradient(to right, #833ab4, #fd1d2d, #fcb04f);
+  --gradient-page-glow:
+    radial-gradient(60% 40% at 15% 0%, rgba(131, 58, 180, 0.22), transparent 70%),
+    radial-gradient(50% 35% at 90% 0%, rgba(253, 29, 45, 0.12), transparent 70%);
+
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-pop: 0 16px 40px rgba(0, 0, 0, 0.55);
+
+  --sidebar-expanded: 248px;
+  --sidebar-collapsed: 72px;
+  --header-height: 64px;
+  --content-max: 1280px;
+  --gutter: 24px;
+
+  --motion-fast: 120ms;
+  --motion-base: 200ms;
+  --motion-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image: var(--gradient-page-glow);
+  background-repeat: no-repeat;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Gradient-border card (from the supplied snippet): 1px gradient ring around a zinc surface. */
+.card-gradient {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: var(--gradient-accent-border);
+}
+.card-gradient > .card-body {
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--gutter);
+}
+
+/* Gradient text (from the supplied snippet). Large headings and big numbers only. */
+.gradient-text {
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d2d 92%, #fcb04f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+}
