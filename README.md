@@ -1,6 +1,6 @@
 # Search Atlas
 
-Personal search analytics over your Chrome Takeout export.
+Personal search analytics over your Chrome Takeout + Safari export.
 
 ```
 nvm use 20                                   # better-sqlite3 is built for Node 20
